@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRIDAY | Advanced AI Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="scanline"></div>
+    <div class="grid-overlay"></div>
+
+    <main id="app">
+        <header>
+            <div class="logo">
+                <span class="glitch" data-text="FRIDAY">FRIDAY</span>
+                <span class="sub-text">SYSTEMS v4.0.2</span>
+            </div>
+            <div class="system-status">
+                <div class="status-item">
+                    <span class="label">CPU</span>
+                    <div class="progress-bar"><div id="cpu-bar" style="width: 0%"></div></div>
+                    <span id="cpu-val">0%</span>
+                </div>
+                <div class="status-item">
+                    <span class="label">RAM</span>
+                    <div class="progress-bar"><div id="ram-bar" style="width: 0%"></div></div>
+                    <span id="ram-val">0%</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="hud-center">
+            <div class="ring-container">
+                <div class="ring outer"></div>
+                <div class="ring middle"></div>
+                <div class="ring inner">
+                    <div class="core-pulse"></div>
+                </div>
+                <div class="voice-waves" id="voice-visualizer">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="data-panels">
+            <div class="panel left">
+                <h3>CORE TELEMETRY</h3>
+                <div class="telemetry-grid">
+                    <div class="t-item">NET: <span id="net-speed">STABLE</span></div>
+                    <div class="t-item">LAT: <span id="latency">12ms</span></div>
+                    <div class="t-item">SEC: <span class="secure">ACTIVE</span></div>
+                </div>
+                <div class="log-container" id="system-logs">
+                    <div class="log-entry">> Initializing FRIDAY core...</div>
+                    <div class="log-entry">> Establishing secure connection...</div>
+                </div>
+            </div>
+            <div class="panel right">
+                <h3>ACTIVE PROTOCOLS</h3>
+                <ul class="protocol-list">
+                    <li><span class="dot"></span> MARK VII ARMOR</li>
+                    <li><span class="dot"></span> HOME AUTOMATION</li>
+                    <li><span class="dot active"></span> SYSTEM MONITOR</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="security-overlay" id="security-panel">
+            <div class="panel">
+                <h3>SECURITY STATUS</h3>
+                <div class="sec-stat">THREATS: <span id="threats">0</span></div>
+                <div class="sec-stat">FIREWALL: <span class="secure">ACTIVE</span></div>
+                <div class="sec-stat">ENCRYPTION: <span class="secure">AES-256</span></div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="input-container">
+                <span class="prompt">></span>
+                <input type="text" id="user-input" placeholder="Awaiting command..." autofocus>
+                <button id="mic-btn">🎙️</button>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
